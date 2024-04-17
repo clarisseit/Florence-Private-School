@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var dob = document.getElementById('dob').value;
+            var email = document.getElementById('email').value;
+            
+            if (!firstName || !lastName || !dob || !email) {
+                alert('Please fill in all required fields in order to submit.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body class="bg-gray-100 p-4">
+
+    <nav class=" ">
+        <img class=" w-36 ml-8 h-12 mt-1" src="/img/Frame 1618868277.png" alt="">
+         <ul class="flex -mt-12 ml-64 cursor-pointer   py-2.5 ">
+              
+             <li class="mr-4 hover:text-[#018AD9]">Home</li>
+             <li class="mr-4 hover:text-[018AD9]" href="/index.html" >About Us</li>
+ 
+             <li class="mr-4 hover:text-[018AD9]">Event </li>
+             <li class="mr-4 hover:text-[018AD9]"> Calendar</li>
+             <a class="mr-4" style="color: #018AD9;">Admissions</a>
+             <li class="mr-4">Blog</li>
+             <li class="mr-4">Contact Us</li>
+             <li class="relative ml-4">
+                 Resources
+                 <i class="fas fa-chevron-down top-2 -right-6 -mt-[1rem] "></i>
+             </li>
+           <li class="ml-96 px-8 style="color: #018AD9; > Login</li>
+           <li class="ml-1 text-white p-2 -mt-1 border-gray-200 rounded" style="background: #018AD9;">Get Started</li>
+ 
+ 
+         </ul>
+        
+       </nav>
+    <div class="w-1/2 ml-36 mt-6 bg-white p-6 rounded-md ">
+        <p>Cancel</p>
+        <h1 class="text-2xl font-semibold mb-4">Registration Form</h1>
+        <p>Kindly fill the form below</p>
+        <form onsubmit="return validateForm()">
+          
+            <h2 class="text-lg font-medium mb-2">Child’s Information:</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="firstName" class="block mb-1">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="middleName" class="block mb-1">Middle Name</label>
+                    <input type="text" id="middleName" name="middleName" placeholder="Middle Name" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="lastName" class="block mb-1">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="dob" class="block mb-1">Date of Birth</label>
+                    <input type="text" id="dob" name="dob" placeholder="MM/DD/YY" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="allergies" class="block mb-1">Allergies or Medical Condition</label>
+                    <input type="text" id="allergies" name="allergies" placeholder="Allergies or Medical Condition" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+            </div>
+
+           
+            <h2 class="text-lg font-medium my-4">Parent/Guardian Information:</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="parentFirstName" class="block mb-1">First Name</label>
+                    <input type="text" id="parentFirstName" name="parentFirstName" placeholder="First Name" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="parentLastName" class="block mb-1">Last Name</label>
+                    <input type="text" id="parentLastName" name="parentLastName" placeholder="Last Name" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="relationship" class="block mb-1">Relationship to the Child</label>
+                    <input type="text" id="relationship" name="relationship" placeholder="Relationship to the Child" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="contactAddress" class="block mb-1">Contact Address</label>
+                    <input type="text" id="contactAddress" name="contactAddress" placeholder="Contact Address" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="phoneNumber" class="block mb-1">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="email" class="block mb-1">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+               
+            </div>
+
+
+            <h2 class="text-lg font-medium my-4">Authorized pickup person</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="pickupPerson" class="block mb-1">Authorized Pickup Person</label>
+                    <input type="text" id="pickupPerson" name="pickupPerson" placeholder="Authorized Pickup Person" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="pickupPersonRelationship" class="block mb-1">Relationship to the Child</label>
+                    <input type="text" id="pickupPersonRelationship" name="pickupPersonRelationship" placeholder="Relationship to the Child" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+                <div>
+                    <label for="pickupPersonPhone" class="block mb-1">Phone Number</label>
+                    <input type="tel" id="pickupPersonPhone" name="pickupPersonPhone" placeholder="Phone Number" class="w-full border-gray-300 border-2 rounded-md px-3 py-2">
+                </div>
+            </div>
+      
+            <h2 class="text-lg font-medium my-4">Additional Information</h2>
+            <div>
+                <label for="additionalInfo" class="block mb-1">Additional Information</label>
+                <textarea id="additionalInfo" name="additionalInfo" placeholder="Additional Information" class="w-full border-gray-300 border-2 rounded-md px-3 py-2"></textarea>
+            </div>
+
+         
+            <div class="mt-6">
+                <p class="mt-2">Note that the school fees will be paid after this form and payment receipt uploaded.</p>
+                <p> <b>Total fee:</b> ₦145,000</p>
+                
+            </div>
+
+         
+            <div class="mt-6">
+                <button type="submit" class=" text-center border-2 border-blue-700 text-xl  ml-36 text-blue-700 px-4 py-2 rounded-md hover:bg-gray-200">Proceed to Payment</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
